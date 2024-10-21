@@ -3,46 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>live sport.afg</title>
+    <title>M3U8 Player with Multicolor Marquee</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
     <style>
-        @keyframes colorChange {
-            25% { color :rgb(81, 22, 38)}
-            80% { color: rgb(255, 0, 0); }
-            80% { color: rgb(29, 238, 29); }
-            90% { color: rgb(237, 237, 29); }
-            50% { color: rgb(182, 8, 182); }
-            40% { color: rgb(30, 30, 235); }
-        }
-
-        .color-changing {
-            font-size: 4em;
-            animation: colorChange 3s infinite;
-        }
         body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color:aquamarine;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(2, 26, 18);
+}
+.marquee {
+    display: flex;
+    overflow: hidden;
+    background:;
+    color: white;
+    font-size: 20px;
+    padding: 10px 0;
+    white-space: nowrap;
+    animation: marquee 20s linear infinite;
+    
+}
+.marquee-item {
+    display: inline-block;
+    margin: 40px; /* Space between items */
+    animation: colorChange 3s infinite;
+    
+   
+}
+
+@keyframes marquee {
+     100% { transform: translateX(100%); }
+   0% { transform: translateX(-100%); }
+}
+
+@keyframes colorChange {
+    0% { color: red; }
+    25% { color: orange; }
+    50% { color: yellow; }
+    75% { color: green; }
+    100% { color: blue; }
+}
+.color-changing {
+            font-size: 50em;
+            animation: colorChange 3s infinite;
+           
         }
-        video {
-            width: 80%;
-            max-width: 600px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-        }
+video {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 20px;
+}
     </style>
 </head>
 <body>
-    <tex align ="center"> <h1 class="color-changing">سلام ازافغانستان</h1><br>
-   
+    <div class="marquee"> 
+        <span  class="marquee-item"> Respect </span>
+        <span class="marquee-item">🌟 Enjoy the Match </span>
+        <span class="marquee-item">⚡️ Don't Miss  </span>
+        <span  class="marquee-item"> any Match </span>
+        <span class="marquee-item">🌟  if you Enjoy </span>
+        <span class="marquee-item">✨ buy me a coffee </span>
+        <span class="marquee-item">⚡️ peace  </span>
+    </div>
     <video id="video" controls></video>
     <script>
         const video = document.getElementById('video');
         const hls = new Hls();
-        const m3u8Url = 'ttps://dmitwlvvll.cdn.mangomolo.com/dubaisportshd/smil:dubaisportshd.smil/index.m3u8'; // Replace with your M3U8 URL
+        const m3u8Url = 'https://cdn.rtvdrenthe.nl/live/rtvdrenthe/tv/1080p/prog_index.m3u8'; // Replace with your M3U8 URL
 
         hls.loadSource(m3u8Url);
         hls.attachMedia(video);
