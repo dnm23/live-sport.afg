@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Live-sport.afg</title>
+    <title>M3U8 Player with Multicolor Marquee</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
     <style>
@@ -21,10 +21,10 @@
     overflow: hidden;
     background:;
     color: white;
-    font-size: 20px;
+    font-size: 25px;
     padding: 10px 0;
     white-space: nowrap;
-    animation: marquee 20s linear infinite;
+    animation: marquee 23s linear infinite;
     
 }
 .marquee-item {
@@ -36,8 +36,8 @@
 }
 
 @keyframes marquee {
-     100% { transform: translateX(100%); }
-   0% { transform: translateX(-100%); }
+     100% { transform: translateX(=100%); }
+   0% { transform: translateX(=100%); }
 }
 
 @keyframes colorChange {
@@ -63,16 +63,18 @@ video {
     </style>
 </head>
 <body>
-    <div class="marquee"> 
-        <span  class="marquee-item"> Respect </span>
-        <span class="marquee-item">🌟 Enjoy the Match </span>
-        <span class="marquee-item">⚡️ Don't Miss  </span>
-        <span  class="marquee-item"> any Match </span>
-        <span class="marquee-item">🌟  if you Enjoy </span>
-        <span class="marquee-item">✨ buy me a coffee </span>
-        <span class="marquee-item">⚡️ peace  </span>
+    <div class="marquee">
+        <span  class="marquee-item">🍹  Enjoy the Match 🍹</span>
+        <span  class="marquee-item"> Respect </span> 
+        
+        <span class="marquee-item">🌟 wes freedom 🌟</span>
+       <!-- <span class="marquee-item">⚡️ Don't Miss ⚡️ any Match </span>-->
+        <!--<span  class="marquee-item"> any Match </span>-->
+        <span class="marquee-item">  ✨if you Enjoy ✨</span>
+        <!--<span class="marquee-item"> ☕️ buy me a coffee ☕️</span>-->
+        <span class="marquee-item">✌️ peace ✌️ </span>
     </div>
-    <video id="video" controls></video>
+    <video id="video" controls autoplay></video>
     <script>
         const video = document.getElementById('video');
         const hls = new Hls();
