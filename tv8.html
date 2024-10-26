@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome,opera,firefox,safari">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>live sport.afg</title>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -10,48 +11,49 @@
        
         
          @keyframes colorChange {
-            50% { color :rgb(81, 22, 38)}
-            80% { color: rgb(255, 0, 0); }
-            80% { color: rgb(29, 238, 29); }
-            90% { color: rgb(237, 237, 29); }
-            50% { color: rgb(182, 8, 182); }
-            40% { color: rgb(30, 30, 235); }
+            30% { color :rgb(14, 15, 13)}
+            65% { color: rgb(255, 0, 0); }
+            100% { color: rgb(29, 238, 29); }
+            70% { color: rgb(29, 238, 29); }
+            40% { color: rgb(255, 0, 0); }
+            20% { color: rgb(6, 7, 6); }
         }
 
         .color-changing {
-            font-size: 3,5em;
-            animation: colorChange 3s infinite;
+            font-size: 3,5m;
+            animation: colorChange 5s infinite;
            
+
         }
 
         body {
-             margin: 0;;
+             margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color:rgb(41, 2, 2);
+            background-color:rgb(146, 175, 155);
             padding-top: 0px;
             padding: 0;
         }
         video {
-            margin: 0;
+            /*margin-top: 10px;*/
             width: 100%;
             max-width: 600px;
-            border: 1px solid #ccc;
+            border: 2px solid #ccc;
             border-radius: 8px;
-            margin: 50px;
+           
+         
         }
     </style>
 </head>
 <body>
 
-    <tex align ="center"> <h1 class="color-changing"><!--&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-->(🇦🇫) سلام از افغانستان (🇦🇫)</h1><br>
+    <tex align ="center"> <h1 class="color-changing"> <!--- &nbsp; &nbsp; &nbsp;-->(🇦🇫) سلام از افغانستان (🇦🇫)</h1><br>
    
-      
-        <br> <br>
+    
         
-    <video id="video" controls></video>
+    <video id="video" controls autoplay></video>
     <script>
         const video = document.getElementById('video');
         const hls = new Hls();
